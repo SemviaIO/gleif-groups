@@ -1,0 +1,23 @@
+{
+  "@context": "https://pkg.semvia.io/semvia/core/json-schema/context/semantic-package.json",
+  "@type": "https://pkg.semvia.io/semvia/core/semantic-package#SemanticPackage",
+  "title": {
+    "en": "GLEIF Corporate Groups"
+  },
+  "description": {
+    "en": "The GLEIF corporate-group graph as a self-contained package: every GLEIF Level 2 relationship record and every legal entity that takes part in one, bundled as two Parquet files inside the archive. Uses the SemviaIO/gleif ontology and relationship-type scheme, so a query written against gleif reads this package unchanged. Needs no credential and no network once installed."
+  },
+  "version": "0.1.0",
+  "owner": "SemviaIO",
+  "baseIRI": "https://pkg.semvia.io/semvia/gleif-groups/",
+  "source": "./schema",
+  "built": "./built",
+  "include": [
+    "schema/**",
+    "data/*.parquet",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "publishTo": "https://pkg.semvia.io/semvia/gleif-groups/publish#semvia-pkg"
+}
