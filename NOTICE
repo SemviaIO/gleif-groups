@@ -1,0 +1,39 @@
+Data source attribution
+=======================
+
+This package contains LEI data. Its archive bundles two Parquet files, a cut
+of the GLEIF Golden Copy:
+
+  data/relationship_records.parquet   every Level 2 relationship record
+  data/lei_records.parquet            every Level 1 legal entity that is the
+                                      start or end node of one of those records
+
+They hold thirteen columns of the golden copy, unmodified apart from the column
+selection, the row selection above, and the row order. The data/ folder is not
+committed to this repository; tools/export-parquet.py in SemviaIO/gleif is the
+exact recipe that writes it.
+
+The data is the GLEIF Golden Copy — Level 1 (who is who) and Level 2 (who owns
+whom) — published by the Global Legal Entity Identifier Foundation (GLEIF).
+
+  Source:         GLEIF Golden Copy and Delta Files
+                  https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-golden-copy
+  Terms of use:   https://www.gleif.org/en/meta/lei-data-terms-of-use/
+
+GLEIF's LEI Data Terms of Use state that the data available through their Access
+Service is provided under the CC0 1.0 Universal licence. That is GLEIF's grant
+over their data, not ours, and it is reproduced here as attribution rather than
+as a representation — a consumer relying on it should read GLEIF's terms
+directly, since GLEIF may change them.
+
+"LEI", "GLEIF" and "Global LEI System" refer to GLEIF and its programme. This
+package is not affiliated with, endorsed by, or produced in cooperation with
+GLEIF.
+
+The IRIs under https://www.gleif.org/ontology/ that this package's ontology
+aligns to are GLEIF's published vocabulary terms. This package names them; it
+does not redistribute their definitions.
+
+Everything in this repository that Semvia authored — the ontology, the mapping
+documents, the publish descriptor, and this notice — is dedicated to the public
+domain under CC0 1.0 Universal. See LICENSE.
